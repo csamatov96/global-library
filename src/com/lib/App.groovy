@@ -17,11 +17,11 @@ node {
         
     }
     stage("Push Image"){
-        sh "docker push app_name:${APP_NAME}"
+        sh "docker push 676918110389.dkr.ecr.us-east-1.amazonaws.com/repo/app_name:${APP_NAME}" //
         
     }
     stage("Notify"){
-        
+
         
     }
 
