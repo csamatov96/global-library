@@ -14,7 +14,7 @@ node {
     }
 
     stage("Build Tag"){
-        sh '''docker tag app1:${APP_VERSION} 676918110389.dkr.ecr.us-east-1.amazonaws.com/repo/app1:${APP_VERSION}''' //version parameter can be added instead 
+        sh '''docker tag app1:${APP_VERSION} 676918110389.dkr.ecr.us-east-1.amazonaws.com/app1:${APP_VERSION}''' //version parameter can be added instead 
         
     }
 
