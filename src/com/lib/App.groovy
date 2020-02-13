@@ -9,7 +9,7 @@ node {
     }
 
     stage("Build Image"){
-        sh "docker build -t repo:${APP_VERSION} ." //version parameter can be added instead     
+        sh "docker build -t app1:${APP_VERSION} ." //version parameter can be added instead     
     }
 
     stage("Build Tag"){
