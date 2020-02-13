@@ -13,11 +13,11 @@ node {
         
     }
     stage("Login to ECR"){
-        sh "$(aws ecr get-login --no-include-email --region us-east-1)"
+        sh '''$(aws ecr get-login --no-include-email --region us-east-1)'''
         
     }
     stage("Push Image"){
-        sh "docker push 676918110389.dkr.ecr.us-east-1.amazonaws.com/repo/app_name:${APP_NAME}" //
+        sh "docker push 676918110389.dkr.ecr.us-east-1.amazonaws.com/repo/app_name:${APP_NAME}" //URI
         
     }
     stage("Notify"){
