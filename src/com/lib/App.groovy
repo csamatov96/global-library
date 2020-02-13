@@ -28,7 +28,7 @@ node {
         
     }
     stage("Notify"){
-        sh "New Image "
+        sh "New Image"
         
     }
 
