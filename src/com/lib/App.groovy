@@ -9,7 +9,7 @@ node {
 
     }
     stage("Build / Tag Image"){
-        sh "docker build -t app_name:${APP_VERSION} ." //version parameter can be added instead 
+        sh "docker build -t app1:${APP_VERSION} ." //version parameter can be added instead 
         
     }
     stage("Login to ECR"){
@@ -17,11 +17,11 @@ node {
         
     }
     stage("Push Image"){
-        sh "docker push 676918110389.dkr.ecr.us-east-1.amazonaws.com/repo/app_name:${APP_VERSION}" //URI
+        sh "docker push 676918110389.dkr.ecr.us-east-1.amazonaws.com/repo/app1:${APP_VERSION}" //URI
         
     }
     stage("Notify"){
-
+        sh "New Image "
         
     }
 
